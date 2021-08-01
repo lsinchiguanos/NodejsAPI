@@ -3,11 +3,11 @@ const { Pool } = require('pg');
 
 // Objeto pool que contendrá los datos necesario para la conexión de la BD de postgresql
 const pool = new Pool({
-    host = 'localhost',
-    user = 'postgres',
-    password = '12345',
-    database = 'book_rental',
-    port = '5432'
+    host : 'localhost',
+    user : 'postgres',
+    password : '123456',
+    database : 'book_rental',
+    port : '5432'
 });
 
 // Exportamos el objeto pool
