@@ -3,7 +3,10 @@ const { Router } = require('express');
 const router = Router();
 
 // Agregamos el archivo con la ruta que deseamos utilizar
-const { searchBook, updBook, newBook, delBook, getBooks } = require('../controllers/book');  // ruta de los métodos de book
+
+const { getBooks, searchBook, newBook, updBook, delBook } = require('../src/controllers/book');  // ruta de los métodos de book
+const { getClientes, searchCliente, newCliente, delCliente, updCliente } = require('../src/controllers/cliente');  // ruta de los métodos de cliente
+
 
 // Asignamos las rutas con sus subfijos y métodos a invocar
 router.get('/books', getBooks);                 // Obtiene todos los libros
