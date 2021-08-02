@@ -13,6 +13,5 @@ app.use(express.urlencoded({extended: true}));
 // Añadimos la rutas
 app.use(require('../src/routes/index'));
 
-
 // Asignamos el puerto donde estará escuchando y respondiendo las peticiones
 app.listen(3000);
