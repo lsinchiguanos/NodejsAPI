@@ -1,5 +1,6 @@
 // Importamos el módulo de express
 const express = require('express');
+const cors = require('cors');
 
 // Declaramos una constante apuntando a la variable de express
 const app = express();
@@ -9,6 +10,7 @@ app.use(express.json());
 
 // En caso de querer trabajar con imágenes, establecemos un true o false
 app.use(express.urlencoded({extended: true}));
+app.use(cors());
 
 // Añadimos la rutas
 app.use(require('../src/routes/index'));
