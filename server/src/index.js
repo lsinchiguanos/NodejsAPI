@@ -10,7 +10,9 @@ app.use(express.json());
 
 // En caso de querer trabajar con imágenes, establecemos un true o false
 app.use(express.urlencoded({extended: true}));
-app.use(cors());
+
+// Dando acceso a la peticiones
+app.use(cors({origin: '*', optionsSuccessStatus: 200, methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH']}));
 
 // Añadimos la rutas
 app.use(require('../src/routes/index'));
