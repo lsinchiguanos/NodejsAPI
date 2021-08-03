@@ -16,8 +16,11 @@ app.options('*', cors())
 // En caso de querer trabajar con imágenes, establecemos un true o false
 app.use(express.urlencoded({ extended: true }));
 
+// Dando acceso a la peticiones
+
+
 // Añadimos la rutas
-app.use(require("../src/routes/index"));
+app.use(require('../src/routes/index'));
 
 // Asignamos el puerto donde estará escuchando y respondiendo las peticiones
 app.listen(app.get("port"), () => {
