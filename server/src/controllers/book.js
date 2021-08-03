@@ -24,6 +24,7 @@ const newBook = async (req, res) => {
     const sentencia = 'INSERT INTO public.book(book_codigo, book_titulo, book_autor, book_anio, book_editorial, book_edicion, book_isbn, book_stock, book_precio) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9);';
     const { codigo, titulo, autor, anio, editorial, edicion, isbn, stock, precio } = req.body;
     const nbook = await db.query(sentencia, [codigo, titulo, autor, anio, editorial, edicion, isbn, stock, precio]);
+    console.log(nbook);
     res.json('Libro registrado con éxito');
 };
 
